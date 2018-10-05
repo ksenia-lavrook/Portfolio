@@ -9,15 +9,29 @@
 	-webkit-border-radius: 80px;
 	        border-radius: 80px;
 	
-	background-image: url("../img/placeholders/user-avatar-placeholder-small-female.png");
+	background-image: url("../img/placeholders/user-avatar-placeholder-small.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
-	        background-size: cover;	
+	        background-size: cover;
+}
+
+.user-photo--big {
+	max-width: 100%;
+	height: auto;
+	border-radius: 110px;
+	background-image: url("../img/placeholders/user-avatar-placeholder-big.jpg");
+	border: 1px solid #DCDCDC;
+
+	@media (min-width: 1200px){
+	 	width: 205px;
+	 	height: 205px;
+	}
 	
 }
 
 .user-photo--shadow {
-	box-shadow: 0px 0px 40px 0px rgba(72, 119, 159, 1);
+  	box-shadow: 0px 0px 40px 0px rgba(72, 119, 159, 1);
 }
+

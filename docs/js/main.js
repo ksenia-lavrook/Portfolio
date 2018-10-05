@@ -6,5 +6,9 @@ $(document).ready(function() {
 	    highlightSelector:"nav a"
 	});
 
+	 $("a[rel='m_PageScroll2id']").mPageScroll2id();
+
 
 }); 
+
+$("html,body").animate({scrollTop:0},500);

@@ -14,8 +14,14 @@ body {
 }
 p {
   font-size: 14px;
-  line-height: 24px;
-  color: #777;
+  line-height: 22px;
+  color: #000;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 16px;
+    line-height: 28px;
+  }
 }
 .block {
   background: #EE82EE;
@@ -37,6 +43,88 @@ p {
 }
 .line {
   border-top: 1px solid #e9eff3;
+}
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens - adaptive styles bofore 1200px */
+/* Medium Devices, Desktops - adaptive styles bofore 992px */
+/* Small Devices, Tablets - adaptive styles bofore 768px */
+/* Extra Small Devices, Phones - adaptive styles bofore 480px */
+/* Custom, iPhone Retina - adaptive styles bofore 320px */
+/*
+ * Box-sizing-model
+ */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+ * Responsive images
+*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*
+ * Cursor change on hover on Buttons
+*/
+input[type="submit"] {
+  cursor: pointer;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+.clear {
+  clear: both;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 .navigation {
   font-size: 22px;
@@ -132,12 +220,25 @@ p {
   margin-bottom: 27px;
   -webkit-border-radius: 80px;
   border-radius: 80px;
-  background-image: url("../img/placeholders/user-avatar-placeholder-small-female.png");
+  background-image: url("../img/placeholders/user-avatar-placeholder-small.jpg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.user-photo--big {
+  max-width: 100%;
+  height: auto;
+  border-radius: 110px;
+  background-image: url("../img/placeholders/user-avatar-placeholder-big.jpg");
+  border: 1px solid #DCDCDC;
+}
+@media (min-width: 1200px) {
+  .user-photo--big {
+    width: 205px;
+    height: 205px;
+  }
 }
 .user-photo--shadow {
   box-shadow: 0px 0px 40px 0px #48779f;
@@ -313,6 +414,105 @@ a.mouse_scroll:focus {
   100% {
     opacity: 1;
   }
+}
+.section {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .section {
+    padding-top: 74px;
+    padding-bottom: 90px;
+  }
+}
+.section--bottom-line {
+  border-bottom: 1px solid #e9eff3;
+}
+.section--bg-laptop {
+  background-repeat: no-repeat;
+  background-position: right 70%;
+}
+@media (min-width: 1500px) {
+  .section--bg-laptop {
+    background-image: url("../img/bg/laptop.png");
+  }
+}
+.heading {
+  color: #2b961d;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 0 9px;
+}
+@media (min-width: 768px) {
+  .heading {
+    font-size: 42px;
+    margin: 0 0 19px;
+  }
+}
+.heading--medium {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 16px 0 15px;
+}
+.definition-list {
+  margin: 0 0 43px;
+  padding: 0;
+  list-style-type: none;
+}
+.definition-list__item {
+  margin: 0 0 13px;
+  padding: 0;
+}
+.definition-list__def {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: #2b961d;
+  text-transform: uppercase;
+}
+.definition-list__desc {
+  font-size: 14px;
+  line-height: 26px;
+}
+@media (min-width: 768px) {
+  .definition-list__desc {
+    font-size: 16px;
+  }
+}
+.button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFF;
+  padding: 11px 26px 14px;
+  background-color: #2b961d;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  box-shadow: 0px 0px 40px 0px rgba(255, 140, 0, 0.7);
+}
+.button a {
+  color: #FFF;
+  text-decoration: none;
+}
+.button:hover,
+.button:active,
+.button:focus {
+  cursor: pointer;
+  background-color: #FF8C00;
+  box-shadow: 1px 1px #2b961d, 2px 2px #2b961d, 3px 3px #2b961d, 4px 4px #2b961d, 5px 5px #2b961d, 6px 6px #2b961d, 7px 7px #2b961d;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
+}
+.button .fa {
+  font-size: 18px;
+  margin-right: 5px;
 }
 .header {
   position: relative;
