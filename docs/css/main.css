@@ -337,8 +337,8 @@ a.mouse_scroll:focus {
   border-radius: 8px;
 }
 .wheel {
-  -webkit-animation: mouse-wheel 0.6s linear infinite;
-  -moz-animation: mouse-wheel 0.6s linear infinite;
+  -webkit-animation: mouse-wheel 3s linear infinite;
+  -moz-animation: mouse-wheel 3s linear infinite;
 }
 @-webkit-keyframes mouse-wheel {
   0% {
@@ -431,6 +431,22 @@ a.mouse_scroll:focus {
     padding-bottom: 90px;
   }
 }
+.section--padding-smaller {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+@media (min-width: 768px) {
+  .section--padding-smaller {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .section--padding-smaller {
+    padding-top: 65px;
+    padding-bottom: 67px;
+  }
+}
 .section--bottom-line {
   border-bottom: 1px solid #e9eff3;
 }
@@ -441,6 +457,15 @@ a.mouse_scroll:focus {
 @media (min-width: 1500px) {
   .section--bg-laptop {
     background-image: url("../img/bg/laptop.png");
+  }
+}
+.section--bg-gear {
+  background-repeat: no-repeat;
+  background-position: left 55%;
+}
+@media (min-width: 1500px) {
+  .section--bg-gear {
+    background-image: url("../img/bg/gear.png");
   }
 }
 .heading {
@@ -459,6 +484,12 @@ a.mouse_scroll:focus {
   font-size: 24px;
   line-height: 28px;
   margin: 16px 0 15px;
+}
+.heading--center {
+  text-align: center;
+}
+.heading__name {
+  font-size: 18px;
 }
 .definition-list {
   margin: 0 0 43px;
@@ -513,6 +544,63 @@ a.mouse_scroll:focus {
 .button .fa {
   font-size: 18px;
   margin-right: 5px;
+}
+.filter {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 19px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .filter {
+    padding-top: 8px;
+    margin-bottom: 50px;
+  }
+}
+.filter__block {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.filter__element {
+  margin: 0 0 9;
+  padding: 0;
+  display: block;
+}
+@media (min-width: 768px) {
+  .filter__element {
+    margin-right: 0px;
+    display: inline-block;
+  }
+}
+@media (min-width: 1200px) {
+  .filter__element {
+    margin-right: 15px;
+  }
+  .filter__element:last-child {
+    margin-right: 0;
+  }
+}
+.filter__button {
+  display: inline-block;
+  color: #CECECE;
+  cursor: pointer;
+  padding: 12px 31px 15px;
+}
+.filter__button:hover {
+  color: #000;
+}
+.filter__button:active {
+  padding: 10px 29px 13px;
+  color: #000;
+  border: 2px solid #2b961d;
+}
+.filter__button--active {
+  padding: 10px 29px 13px;
+  color: #000;
+  border: 2px solid #2b961d;
 }
 .header {
   position: relative;
