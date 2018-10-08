@@ -9,6 +9,11 @@ $(document).ready(function() {
 	 $("a[rel='m_PageScroll2id']").mPageScroll2id();
 
 
+	 // MixItUp - фильтрация работ в портфолио
+	$('#portfolio-projects').mixItUp();
+
+
 }); 
 
 $("html,body").animate({scrollTop:0},500);
+
